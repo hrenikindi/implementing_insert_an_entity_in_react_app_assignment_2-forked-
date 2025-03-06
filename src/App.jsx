@@ -1,15 +1,15 @@
-
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Dashboard from './components/Dashboard';
+import AddMovieForm from './components/addMovieForm';
 
 const App = () => {
   return (
-    <Router>
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Dashboard />} />
+        <Route path="/add-movie" element={<AddMovieForm />} />
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 };
 
